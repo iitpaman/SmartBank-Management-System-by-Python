@@ -2,7 +2,7 @@ import streamlit as st
 from hello import Bank
 
 st.set_page_config(page_title="Simple Bank App", layout="centered")
-st.title("🏦 Welcome to Streamlit Bank")
+st.title("🏦 Welcome to PyBank System")
 
 menu = st.sidebar.selectbox("Choose Action", ["Create Account", "Deposit", "Withdraw", "Show Details", "Update Info", "Delete Account"])
 
@@ -75,3 +75,4 @@ elif menu == "Delete Account":
     if st.button("Delete"):
         success, msg = Bank.delete_user(acc_no, int(pin))
         st.success(msg) if success else st.error(msg)
+
